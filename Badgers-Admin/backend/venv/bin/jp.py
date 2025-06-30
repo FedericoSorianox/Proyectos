@@ -1,4 +1,4 @@
-#!/Users/fede/Proyectos/Badgers-Admin/Badgers-Admin/backend/venv/bin/python3.10
+#!/Users/fede/Proyectos/Badgers-Admin/backend/venv/bin/python3.13
 
 import sys
 import json
