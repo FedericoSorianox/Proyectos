@@ -10,18 +10,14 @@ class SocioSerializer(serializers.ModelSerializer):
     # 3. Con `format="%Y-%m-%d"`, le decimos que lo represente como un string de solo fecha (AAAA-MM-DD).
     # 4. Con `read_only=True`, confirmamos que este campo no se puede escribir a través de la API.
     fecha_registro = serializers.DateField(format="%Y-%m-%d", read_only=True)
-    foto = serializers.SerializerMethodField()
+    #foto = serializers.SerializerMethodField()
 
     class Meta:
         model = Socio
-        # La lista de campos se mantiene igual, incluyendo 'fecha_registro'
-        fields = [
-            'ci', 'nombre', 'celular', 'foto', 'fecha_nacimiento', 
-            'tipo_cuota', 'contacto_emergencia', 'emergencia_movil', 
-            'enfermedades', 'comentarios', 'fecha_registro', 'activo',
-            'inactive_status', 'inactive_reason', 'inactive_since', 'en_vacaciones'
-        ]
-        # Solo 'fecha_registro' es read_only
+        # La forma más sencilla es usar '__all__' para incluir todos los campos.
+        fields = '__all__'
+        # Opcionalmente, puedes listar todos los campos como lo tenías antes, 
+        # solo asegúrate de que 'foto' esté en la lista.
         read_only_fields = ['fecha_registro']
     
     def get_foto(self, obj):
@@ -39,13 +35,11 @@ class PagoSerializer(serializers.ModelSerializer):
 
 class ProductoSerializer(serializers.ModelSerializer):
     # --- CAMBIO 1: Usamos un SerializerMethodField para un cálculo explícito ---
-    ganancia = serializers.SerializerMethodField()
-    foto = serializers.SerializerMethodField()
+    ganancia = serializers.ReadOnlyField()
 
     class Meta:
         model = Producto
-        # Asegúrate de que 'foto' esté aquí si lo añades al modelo en el siguiente paso
-        fields = ['id', 'nombre', 'precio_costo', 'precio_venta', 'stock', 'ganancia', 'foto']
+        fields = '__all__'
     
     # --- CAMBIO 2: Añadimos la función que calcula el valor para 'ganancia' ---
     def get_ganancia(self, obj):
@@ -54,13 +48,7 @@ class ProductoSerializer(serializers.ModelSerializer):
             return obj.precio_venta - obj.precio_costo
         return 0
     
-    def get_foto(self, obj):
-        if obj.foto:
-            request = self.context.get('request')
-            if request:
-                return request.build_absolute_uri(obj.foto.url)
-            return obj.foto.url
-        return None
+   
 
 class VentaSerializer(serializers.ModelSerializer):
     class Meta:

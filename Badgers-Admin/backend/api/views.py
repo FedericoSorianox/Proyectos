@@ -30,12 +30,13 @@ class SocioViewSet(viewsets.ModelViewSet):
     queryset = Socio.objects.all().order_by('nombre')
     serializer_class = SocioSerializer
     pagination_class = None
+    parser_classes = [MultiPartParser, FormParser]
     lookup_field = 'ci'
     filter_backends = [filters.SearchFilter]
     search_fields = ['nombre', 'ci']
     permission_classes = [IsAuthenticated]
 
-    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser])
+    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser])
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
         if not csv_file:
@@ -98,7 +99,7 @@ class PagoViewSet(viewsets.ModelViewSet):
     pagination_class = None  # Desactivamos la paginación
     permission_classes = [IsAuthenticated]
     
-    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser])
+    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser]) 
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
         if not csv_file:
@@ -143,9 +144,10 @@ class ProductoViewSet(viewsets.ModelViewSet):
     queryset = Producto.objects.all().order_by('nombre')
     serializer_class = ProductoSerializer
     permission_classes = [IsAuthenticated]
-    pagination_class = None  # Desactivamos la paginación
+    pagination_class = None # Desactivamos la paginación
+    parser_classes = [MultiPartParser, FormParser]  
     
-    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser])
+    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser])
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
         if not csv_file:
@@ -206,7 +208,7 @@ class VentaViewSet(viewsets.ModelViewSet):
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
-    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser])
+    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser])
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
         if not csv_file:
@@ -271,7 +273,7 @@ class GastoViewSet(viewsets.ModelViewSet):
     serializer_class = GastoSerializer
     permission_classes = [IsAuthenticated]
     
-    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser])
+    @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser])
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
         if not csv_file:

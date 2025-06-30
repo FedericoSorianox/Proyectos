@@ -94,8 +94,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -134,3 +134,31 @@ from corsheaders.defaults import default_headers
 CORS_ALLOW_HEADERS = list(default_headers) + [
     'authorization',
 ] 
+# ==============================================================================
+# CONFIGURACIÓN DE ALMACENAMIENTO EN AWS S3
+# ==============================================================================
+
+# 1. Credenciales y configuración del Bucket
+# ¡NUNCA pongas estas claves directamente en el código en producción! 
+# Usa variables de entorno. Por ahora, para probar, puedes ponerlas aquí.
+AWS_ACCESS_KEY_ID = 'TU_ACCESS_KEY_ID'
+AWS_SECRET_ACCESS_KEY = 'TU_SECRET_ACCESS_KEY'
+AWS_STORAGE_BUCKET_NAME = 'badgerss3' # El nombre que le diste a tu bucket
+AWS_S3_REGION_NAME = 'sa-east-1' # O la región donde creaste el bucket (ej: 'sa-east-1')
+
+# 2. Configuración del comportamiento de los archivos
+AWS_S3_CUSTOM_DOMAIN = f'badgerss3.s3.amazonaws.com'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400', # Controla el caché del navegador por 1 día
+}
+AWS_DEFAULT_ACL = 'public-read' # Permite que los archivos subidos sean públicamente legibles
+
+# 3. Ubicación de los archivos
+# Los archivos de MEDIA (subidos por los usuarios) irán a la carpeta 'media/' dentro del bucket.
+MEDIA_URL = f'https://badgerss3/media/'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# 4. (Opcional pero recomendado) Configuración para archivos estáticos (CSS, JS)
+# Si en el futuro quieres servir también tus archivos estáticos desde S3.
+# STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

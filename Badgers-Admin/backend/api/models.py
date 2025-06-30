@@ -54,7 +54,7 @@ class Producto(models.Model):
     precio_venta = models.DecimalField(max_digits=10, decimal_places=2)
     precio_costo = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     stock = models.IntegerField(default=0)
-    foto = models.ImageField(upload_to=producto_foto_path, blank=True, null=True)
+    foto = models.ImageField(upload_to=producto_foto_path, blank=True, null=True) 
     
     @property
     def ganancia(self):

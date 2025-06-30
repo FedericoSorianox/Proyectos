@@ -8,8 +8,8 @@ import {
 } from '@themesberg/react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-    faCheckCircle, faTimesCircle, faMinusCircle, 
-    faInfoCircle, faStar, faMoneyBill
+    faCheckCircle, faTimesCircle, 
+    faInfoCircle, faStar
 } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -184,7 +184,7 @@ const PagosPage = () => {
     const [confirmDialog, setConfirmDialog] = useState({ show: false, socio: null, mes: null });
     const [infoDialog, setInfoDialog] = useState({ show: false, socio: null, mes: null });
 
-    const fetchSociosAndPagos = async () => {
+    const fetchSociosAndPagos = React.useCallback(async () => {
         try {
             const [sociosRes, pagosRes] = await Promise.all([
                 apiClient.get('/socios/?limit=1000'), 
@@ -203,11 +203,11 @@ const PagosPage = () => {
             setSocios([]);
             setPagos([]);
         }
-    };
+    }, [selectedYear]);
     
     useEffect(() => {
         fetchSociosAndPagos();
-    }, [selectedYear]);
+    }, [fetchSociosAndPagos]);
 
     useEffect(() => {
         if (location.state?.selectedSocioId) {

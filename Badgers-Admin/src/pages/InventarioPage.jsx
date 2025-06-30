@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import apiClient, { getBaseUrl } from '../api';
 import {
     Card, Row, Col, Container, Button, Form, Table,
@@ -7,8 +7,7 @@ import {
 } from '@themesberg/react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-    faPlus, faEdit, faTrash, faArrowUp, 
-    faArrowDown, faTimes, faMoneyBill,
+    faPlus, faEdit, faTrash, 
     faImage, faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -183,34 +182,43 @@ const ProductDetailPanel = ({ product, show, onHide, onEdit, onDelete }) => {
     };
 
     const handleSave = async () => {
-        try {
-            const data = new FormData();
-            Object.keys(formData).forEach(key => {
-                if (key !== 'foto') {
-                    data.append(key, formData[key]);
-                }
-            });
-            
-            if (fotoFile) {
-                data.append('foto', fotoFile);
+    try {
+        const dataParaEnviar = new FormData();
+        
+        Object.keys(formData).forEach(key => {
+            if (key !== 'foto') {
+                dataParaEnviar.append(key, formData[key]);
             }
+        });
 
-            const response = await apiClient.patch(`/productos/${product.id}/`, data, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
-            
-            setIsEditing(false);
-            if (typeof onEdit === 'function') {
-                onEdit(response.data);
-            }
-            onHide();
-        } catch (error) {
-            console.error("Error al guardar producto:", error);
-            alert("Error al guardar los cambios");
+        // Agregamos el archivo de imagen NUEVO, solo si el usuario seleccionó uno.
+        if (fotoFile) {
+            dataParaEnviar.append('foto', fotoFile);
         }
-    };
+
+       const config = {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        };
+
+        // ¡AQUÍ AÑADIMOS 'config' A LA LLAMADA!
+        const response = await apiClient.patch(`/productos/${product.id}/`, dataParaEnviar, config);
+
+        // --- PASO 3: MANEJAR LA RESPUESTA EXITOSA ---
+        console.log('¡Producto guardado exitosamente!', response.data);
+        
+        // Lógica para cerrar el modal o actualizar la UI
+        onHide(); // Cierra el modal
+        if (typeof onEdit === 'function') {
+            onEdit(response.data); // Actualiza la lista de productos
+        }
+        
+    } catch (error) {
+        console.error("Error al guardar el producto:", error.response?.data || error.message);
+        alert("Hubo un error al guardar el producto.");
+    }
+};
 
     if (!product) return null;
 
@@ -340,19 +348,23 @@ const ProductListComponent = ({ products, onProductUpdate, onEdit }) => {
     };
 
     const handleSave = async (formData, file, id) => {
-        try {
-            console.log('Saving product with formData:', formData);
-            let response;
-            
-            if (id) {
-                response = await apiClient.patch(`/productos/${id}/`, formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' }
-                });
-            } else {
-                response = await apiClient.post('/productos/', formData, {
-                    headers: { 'Content-Type': 'multipart/form-data' }
-                });
+    try {
+        let response;
+        const config = {
+            headers: {
+                // Al poner 'Content-Type' como 'multipart/form-data',
+                // le indicamos a Axios que use el formato correcto para archivos.
+                // Es la forma explícita de anular cualquier valor por defecto.
+                'Content-Type': 'multipart/form-data'
             }
+        };
+
+        if (id) {
+            // Pasamos la configuración como tercer argumento
+            response = await apiClient.patch(`/productos/${id}/`, formData, config);
+        } else {
+            response = await apiClient.post('/productos/', formData, config);
+        }
             
             console.log('Save product response:', response);
             setShowForm(false);
@@ -673,8 +685,8 @@ const VentaFormComponent = ({ productos, onVentaSuccess, ventas }) => {
 // --- Componente de Stock Semanal ---
 const StockSemanalComponent = ({ productos, ventas }) => {
     const [selectedWeek, setSelectedWeek] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [loading] = useState(false);
+    const [error] = useState(null);
     
     const getWednesdays = () => {
         const wednesdays = [];
@@ -716,12 +728,7 @@ const StockSemanalComponent = ({ productos, ventas }) => {
         });
     };
 
-    // Función para comparar fechas ignorando la hora
-    const isSameDay = (date1, date2) => {
-        return date1.getFullYear() === date2.getFullYear() &&
-               date1.getMonth() === date2.getMonth() &&
-               date1.getDate() === date2.getDate();
-    };
+    // (Función isSameDay eliminada porque no se utiliza)
 
     const wednesdays = getWednesdays();
     const weekDates = selectedWeek ? getWeekDates(selectedWeek) : [];

@@ -1,12 +1,25 @@
 // src/pages/SociosPage.jsx
 
-import React, { useState, useEffect } from 'react';
-import apiClient from '../api';
+import React, { useState, useEffect, useCallback } from 'react';
+import apiClient, { getBaseUrl } from '../api';
 import { Container, Row, Col, Card, Button, Modal, Form, Table, Alert, InputGroup, FormControl as BSFormControl } from '@themesberg/react-bootstrap';
 import { PersonPlus, Whatsapp, PencilSquare, Trash, Eye } from 'react-bootstrap-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
+
+// Función para construir la URL completa de las imágenes
+const getImageUrl = (imagePath) => {
+    if (!imagePath) return null;
+    
+    // Si la imagen ya tiene una URL completa (de S3), la devolvemos tal como está
+    if (imagePath.startsWith('http')) {
+        return imagePath;
+    }
+    
+    // Si no, construimos la URL local (para desarrollo sin S3)
+    const baseUrl = getBaseUrl().replace(/\/$/, '');
+    return `${baseUrl}${imagePath}`;
+};
 
 // Componente de Formulario para Crear, Editar y Ver Socios
 const SocioForm = ({ show, onHide, onSave, socio, isViewOnly = false, sociosList = [] }) => {
@@ -88,13 +101,13 @@ const SocioForm = ({ show, onHide, onSave, socio, isViewOnly = false, sociosList
             <Modal.Body>
                 {socio && socio.foto && (
                     <div className="d-flex justify-content-center mb-3">
-                        <img src={socio.foto} alt={formData.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd' }} />
+                        <img src={getImageUrl(socio.foto)} alt={formData.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
                     </div>
                 )}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-2">
                         <Form.Label>CI</Form.Label>
-                        <BSFormControl name="ci" value={formData.ci || ''} onChange={handleChange} disabled={isViewOnly} required />
+                        <BSFormControl name="ci" value={formData.ci || ''} onChange={handleChange} disabled={isViewOnly || !!socio} required />
                     </Form.Group>
                     <Form.Group className="mb-2">
                         <Form.Label>Nombre Completo</Form.Label>
@@ -122,11 +135,11 @@ const SocioForm = ({ show, onHide, onSave, socio, isViewOnly = false, sociosList
                     </Form.Group>
                     <Form.Group className="mb-2">
                         <Form.Label>Enfermedades</Form.Label>
-                        <BSFormControl as="textarea" name="enfermedades" value={formData.enfermedades || ''} onChange={handleChange} disabled={isViewOnly} />
+                        <BSFormControl as="textarea" rows={2} name="enfermedades" value={formData.enfermedades || ''} onChange={handleChange} disabled={isViewOnly} />
                     </Form.Group>
                     <Form.Group className="mb-2">
                         <Form.Label>Comentarios</Form.Label>
-                        <BSFormControl as="textarea" name="comentarios" value={formData.comentarios || ''} onChange={handleChange} disabled={isViewOnly} />
+                        <BSFormControl as="textarea" rows={2} name="comentarios" value={formData.comentarios || ''} onChange={handleChange} disabled={isViewOnly} />
                     </Form.Group>
 
                     {!isViewOnly && (
@@ -186,7 +199,7 @@ const SocioForm = ({ show, onHide, onSave, socio, isViewOnly = false, sociosList
                             <hr className="my-4" />
                             <Form.Group className="mb-3">
                                 <Form.Label>Foto (opcional)</Form.Label>
-                                <Form.Control type="file" onChange={handleFileChange} />
+                                <Form.Control type="file" onChange={handleFileChange} accept="image/*" />
                                 {fotoFile && <div className="small mt-1">Archivo seleccionado: {fotoFile.name}</div>}
                             </Form.Group>
                         </>
@@ -210,31 +223,38 @@ const SociosPage = () => {
     const [viewingSocio, setViewingSocio] = useState(null);
     const [alert, setAlert] = useState({ show: false, message: '', variant: 'success' });
 
-    const fetchSocios = async () => {
+    const fetchSocios = useCallback(async () => {
         try {
             const response = await apiClient.get(`socios/?search=${searchTerm}`);
             setSocios(response.data.results ? response.data.results : response.data);
-        } catch (error) {
+        } catch {
             setSocios([]);
         }
-    };
+    }, [searchTerm]);
 
     useEffect(() => {
         fetchSocios();
-    }, [searchTerm]);
+    }, [fetchSocios]);
 
     const handleSaveSocio = async (formData, ci) => {
         try {
+            const config = {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            };
+
             if (ci) {
-                await apiClient.put(`/socios/${ci}/`, formData, { headers: { 'Content-Type': 'multipart/form-data' }});
+                await apiClient.put(`/socios/${ci}/`, formData, config);
             } else {
-                await apiClient.post('/socios/', formData, { headers: { 'Content-Type': 'multipart/form-data' }});
+                await apiClient.post('/socios/', formData, config);
             }
             fetchSocios();
             setFormOpen(false);
             setEditingSocio(null);
             setAlert({ show: true, message: 'Socio guardado correctamente', variant: 'success' });
         } catch (error) {
+            console.error("Error al guardar socio:", error.response?.data || error.message);
             setAlert({ show: true, message: 'Error al guardar socio', variant: 'danger' });
         }
     };
@@ -249,7 +269,7 @@ const SociosPage = () => {
                 await apiClient.delete(`/socios/${ci}/`);
                 fetchSocios();
                 setAlert({ show: true, message: 'Socio eliminado correctamente', variant: 'success' });
-            } catch (error) {
+            } catch {
                 setAlert({ show: true, message: 'Error al eliminar socio', variant: 'danger' });
             }
         }
@@ -285,6 +305,7 @@ const SociosPage = () => {
                                 <Table responsive hover className="align-middle mb-0">
                                     <thead className="table-light">
                                         <tr>
+                                            <th>Foto</th>
                                             <th>CI</th>
                                             <th>Nombre</th>
                                             <th>Celular</th>
@@ -296,6 +317,20 @@ const SociosPage = () => {
                                     <tbody>
                                         {socios.map(socio => (
                                             <tr key={socio.ci}>
+                                                <td>
+                                                    {socio.foto ? (
+                                                        <img 
+                                                            src={getImageUrl(socio.foto)} 
+                                                            alt={socio.nombre}
+                                                            className="rounded-circle"
+                                                            style={{ width: '40px', height: '40px', objectFit: 'cover' }}
+                                                        />
+                                                    ) : (
+                                                        <div className="rounded-circle bg-light d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
+                                                            <FontAwesomeIcon icon={PersonPlus} className="text-muted" />
+                                                        </div>
+                                                    )}
+                                                </td>
                                                 <td>{socio.ci}</td>
                                                 <td>{socio.nombre}</td>
                                                 <td>{socio.celular}</td>
@@ -343,7 +378,7 @@ const SociosPage = () => {
                                     <>
                                         {viewingSocio.foto && (
                                             <div className="d-flex justify-content-center mb-3">
-                                                <img src={viewingSocio.foto} alt={viewingSocio.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd' }} />
+                                                <img src={getImageUrl(viewingSocio.foto)} alt={viewingSocio.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
                                             </div>
                                         )}
                                         <div className="mb-3">
@@ -351,7 +386,7 @@ const SociosPage = () => {
                                             <p><strong>CI:</strong> {viewingSocio.ci}</p>
                                             <p><strong>Nombre:</strong> {viewingSocio.nombre}</p>
                                             <p><strong>Celular:</strong> {viewingSocio.celular || 'No especificado'}</p>
-                                            <p><strong>Fecha de Nacimiento:</strong> {viewingSocio.fecha_nacimiento || 'No especificada'}</p>
+                                            <p><strong>Fecha de Nacimiento:</strong> {viewingSocio.fecha_nacimiento ? new Date(viewingSocio.fecha_nacimiento).toLocaleDateString() : 'No especificada'}</p>
                                             <p><strong>Tipo de Cuota:</strong> {viewingSocio.tipo_cuota || 'No especificado'}</p>
                                         </div>
 
