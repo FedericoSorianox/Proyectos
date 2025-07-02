@@ -8,6 +8,7 @@ from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import viewsets, status, filters 
 from rest_framework.views import APIView
 from .models import Socio, Pago, Producto, Venta, Gasto
+from django.http import JsonResponse
 from .serializers import SocioSerializer, PagoSerializer, ProductoSerializer, VentaSerializer, GastoSerializer
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
@@ -337,3 +338,16 @@ def eliminar_socios_sin_ci(request):
     count, _ = Socio.objects.filter(ci__isnull=True).delete()
     count2, _ = Socio.objects.filter(ci='').delete()
     return Response({'message': f'Se eliminaron {count + count2} socios sin CI.'}, status=status.HTTP_200_OK)    
+
+@api_view(['GET'])
+@permission_classes([])  # No authentication required for health checks
+def health_check(request):
+    """
+    Simple health check endpoint that returns a 200 OK response.
+    This endpoint is used by load balancers and monitoring systems to verify the service is running.
+    """
+    return Response({
+        'status': 'healthy',
+        'message': 'Service is running',
+        'timestamp': datetime.now().isoformat()
+    }, status=status.HTTP_200_OK)
