@@ -31,6 +31,11 @@ echo "Verificando gunicorn:"
 which gunicorn
 gunicorn --version
 
+# Ejecutar migraciones antes de iniciar
+echo "=== EJECUTANDO MIGRACIONES ==="
+python manage.py migrate --noinput
+echo "Migraciones completadas"
+
 # Iniciar gunicorn con más debugging
 echo "=== INICIANDO GUNICORN ==="
 exec gunicorn badgers_project.wsgi:application --bind 0.0.0.0:10000 --log-level debug 
