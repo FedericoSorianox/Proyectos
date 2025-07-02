@@ -147,7 +147,7 @@ AWS_STORAGE_BUCKET_NAME = 'badgerss3' # El nombre que le diste a tu bucket
 AWS_S3_REGION_NAME = 'sa-east-1' # O la región donde creaste el bucket (ej: 'sa-east-1')
 
 # 2. Configuración del comportamiento de los archivos
-AWS_S3_CUSTOM_DOMAIN = f'badgerss3.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_S3_REGION_NAME}.amazonaws.com'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400', # Controla el caché del navegador por 1 día
 }
@@ -155,7 +155,7 @@ AWS_DEFAULT_ACL = 'public-read' # Permite que los archivos subidos sean pública
 
 # 3. Ubicación de los archivos
 # Los archivos de MEDIA (subidos por los usuarios) irán a la carpeta 'media/' dentro del bucket.
-MEDIA_URL = f'https://badgerss3/media/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # 4. (Opcional pero recomendado) Configuración para archivos estáticos (CSS, JS)
