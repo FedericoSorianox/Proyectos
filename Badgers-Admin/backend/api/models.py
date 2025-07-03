@@ -17,7 +17,8 @@ class Socio(models.Model):
     tipo_cuota = models.CharField(max_length=100, blank=True, null=True)
     enfermedades = models.TextField(blank=True, null=True)
     comentarios = models.TextField(blank=True, null=True)
-    foto = models.ImageField(upload_to='socios_fotos/', blank=True, null=True) # Mejor que Base64
+   # foto = models.ImageField(upload_to='socios_fotos/', blank=True, null=True) # Mejor que Base64
+    foto = models.CharField(max_length=255, blank=True, null=True)
     fecha_registro = models.DateTimeField(auto_now_add=True)
     fecha_registro = models.DateField(auto_now_add=True, null=True, blank=True)
     activo = models.BooleanField(default=True)
@@ -54,8 +55,8 @@ class Producto(models.Model):
     precio_venta = models.DecimalField(max_digits=10, decimal_places=2)
     precio_costo = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
     stock = models.IntegerField(default=0)
-    foto = models.ImageField(upload_to=producto_foto_path, blank=True, null=True) 
-    
+   # foto = models.ImageField(upload_to=producto_foto_path, blank=True, null=True) 
+    foto = models.CharField(max_length=255, blank=True, null=True)
     @property
     def ganancia(self):
         if self.precio_venta is not None and self.precio_costo is not None:

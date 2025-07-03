@@ -3,8 +3,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import apiClient, { getBaseUrl } from '../api';
 import { Container, Row, Col, Card, Button, Modal, Form, Table, Alert, InputGroup, FormControl as BSFormControl } from '@themesberg/react-bootstrap';
-import { PersonPlus, Whatsapp, PencilSquare, Trash, Eye } from 'react-bootstrap-icons';
+import { PersonPlus, Whatsapp, PencilSquare, Eye } from 'react-bootstrap-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash,faUser } from '@fortawesome/free-solid-svg-icons'; // <-- Añadimos la importación correcta
 
 
 // Función para construir la URL completa de las imágenes
@@ -99,9 +100,9 @@ const SocioForm = ({ show, onHide, onSave, socio, isViewOnly = false, sociosList
                 <Modal.Title>{isViewOnly ? 'Detalles del Socio' : (socio ? 'Editar Socio' : 'Agregar Nuevo Socio')}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {socio && socio.foto && (
+                {socio && socio.foto_url && (
                     <div className="d-flex justify-content-center mb-3">
-                        <img src={getImageUrl(socio.foto)} alt={formData.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
+                        <img src={getImageUrl(socio.foto_url)} alt={formData.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
                     </div>
                 )}
                 <Form onSubmit={handleSubmit}>
@@ -318,16 +319,16 @@ const SociosPage = () => {
                                         {socios.map(socio => (
                                             <tr key={socio.ci}>
                                                 <td>
-                                                    {socio.foto ? (
+                                                    {socio.foto_url ? (
                                                         <img 
-                                                            src={getImageUrl(socio.foto)} 
+                                                            src={getImageUrl(socio.foto_url)} 
                                                             alt={socio.nombre}
                                                             className="rounded-circle"
                                                             style={{ width: '40px', height: '40px', objectFit: 'cover' }}
                                                         />
                                                     ) : (
                                                         <div className="rounded-circle bg-light d-flex align-items-center justify-content-center" style={{ width: '40px', height: '40px' }}>
-                                                            <FontAwesomeIcon icon={PersonPlus} className="text-muted" />
+                                                            <FontAwesomeIcon icon={faUser} className="text-muted" />
                                                         </div>
                                                     )}
                                                 </td>
@@ -349,7 +350,7 @@ const SociosPage = () => {
                                                 <td>
                                                     <Button variant="outline-primary" size="sm" className="me-2" onClick={() => setViewingSocio(socio)}><Eye /></Button>
                                                     <Button variant="outline-success" size="sm" className="me-2" onClick={() => { setEditingSocio(socio); setFormOpen(true); }}><PencilSquare /></Button>
-                                                    <Button variant="outline-danger" size="sm" onClick={() => handleDeleteSocio(socio.ci)}><Trash /></Button>
+                                                    <Button variant="outline-danger" size="sm" onClick={() => handleDeleteSocio(socio.ci)}><FontAwesomeIcon icon={faTrash} /></Button>
                                                     {socio.celular && (
                                                         <Button variant="outline-success" size="sm" className="ms-2" onClick={() => window.open(`https://wa.me/${socio.celular.replace(/\D/g, '')}`)}><Whatsapp /></Button>
                                                     )}
@@ -376,9 +377,9 @@ const SociosPage = () => {
                             <Modal.Body>
                                 {viewingSocio && (
                                     <>
-                                        {viewingSocio.foto && (
+                                        {viewingSocio.foto_url && (
                                             <div className="d-flex justify-content-center mb-3">
-                                                <img src={getImageUrl(viewingSocio.foto)} alt={viewingSocio.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
+                                                <img src={getImageUrl(viewingSocio.foto_url)} alt={viewingSocio.nombre} style={{ width: 100, height: 100, borderRadius: '50%', border: '2px solid #ddd', objectFit: 'cover' }} />
                                             </div>
                                         )}
                                         <div className="mb-3">

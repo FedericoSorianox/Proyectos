@@ -78,10 +78,10 @@ const ProductForm = ({ show, onHide, onSave, product, isViewOnly = false }) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                {product && product.foto && (
+                {product && product.foto_url && (
                     <div className="text-center mb-3">
                         <img 
-                            src={getImageUrl(product.foto)} 
+                            src={getImageUrl(product.foto_url)} 
                             alt={formData.nombre}
                             className="img-fluid rounded"
                             style={{ maxHeight: '200px' }}
@@ -232,7 +232,7 @@ const ProductDetailPanel = ({ product, show, onHide, onEdit, onDelete }) => {
             <Modal.Body>
                 <div className="text-center mb-4">
                     <img 
-                            src={getImageUrl(product.foto)} 
+                            src={getImageUrl(product.foto_url)} 
                         alt={product.nombre}
                         className="img-fluid rounded"
                         style={{ maxHeight: '200px' }}
@@ -415,9 +415,9 @@ const ProductListComponent = ({ products, onProductUpdate, onEdit }) => {
                     {products.map(product => (
                         <tr key={product.id} onClick={() => { setSelectedProductView(product); setShowViewModal(true); }} style={{ cursor: 'pointer' }}>
                             <td>
-                                {product.foto ? (
+                                {product.foto_url ? (
                                     <img 
-                                        src={getImageUrl(product.foto)} 
+                                        src={getImageUrl(product.foto_url)} 
                                         alt={product.nombre}
                                         className="rounded"
                                         style={{ width: '50px', height: '50px', objectFit: 'cover' }}

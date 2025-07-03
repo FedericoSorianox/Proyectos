@@ -182,6 +182,18 @@ class ProductoViewSet(viewsets.ModelViewSet):
             "errors": errors
         }, status=status.HTTP_200_OK)
 
+ #   def create(self, request, *args, **kwargs):
+  #      print("==> Recibido POST para crear producto")
+  #      print("Datos:", request.data)
+  #      print("Archivos:", request.FILES)
+  #      return super().create(request, *args, **kwargs)
+
+  #  def update(self, request, *args, **kwargs):
+  #      print("==> Recibido PATCH para actualizar producto")
+  #      print("Datos:", request.data)
+  #      print("Archivos:", request.FILES)
+  #      return super().update(request, *args, **kwargs)
+
 
 class VentaViewSet(viewsets.ModelViewSet):
     queryset = Venta.objects.all().order_by('-fecha_venta')
