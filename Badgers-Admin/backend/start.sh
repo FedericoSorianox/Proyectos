@@ -31,11 +31,19 @@ echo "Verificando gunicorn:"
 which gunicorn
 gunicorn --version
 
-# Ejecutar migraciones antes de iniciar
+
+
+
 echo "=== EJECUTANDO MIGRACIONES ==="
 python manage.py migrate --noinput
 echo "Migraciones completadas"
 
-# Iniciar gunicorn con más debugging
+# --- LÍNEA NUEVA PARA CREAR EL SUPERUSUARIO ---
+echo "=== CREANDO SUPERUSUARIO (SI NO EXISTE) ==="
+python manage.py shell -c "from django.contrib.auth.models import User; User.objects.filter(username='admin').exists() or User.objects.create_superuser('admin', 'admin@example.com', 'badger2025!@#')"
+echo "Proceso de superusuario completado"
+
+
+# Iniciar gunicorn
 echo "=== INICIANDO GUNICORN ==="
-exec gunicorn badgers_project.wsgi:application --bind 0.0.0.0:10000 --log-level debug 
+exec gunicorn badgers_project.wsgi:application --bind 0.0.0.0:10000 --log-level debug
