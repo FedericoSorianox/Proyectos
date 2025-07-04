@@ -116,7 +116,10 @@ class PagoViewSet(viewsets.ModelViewSet):
         if mes and año:
             try:
                 # Filtramos por los campos 'mes' y 'año' del modelo Pago
-                queryset = queryset.filter(mes=int(mes), año=int(año))
+                queryset = queryset.filter(
+                    fecha_pago__month=int(mes),
+                     fecha_pago__year=int(año)
+                     )
             except (ValueError, TypeError):
                 # En caso de que los parámetros no sean números válidos,
                 # no se aplica el filtro para evitar errores.
