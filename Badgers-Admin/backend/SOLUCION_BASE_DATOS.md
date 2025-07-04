@@ -37,8 +37,8 @@ DJANGO_SETTINGS_MODULE=badgers_project.settings_production
 DATABASE_URL=postgresql://... (se configura automáticamente)
 AWS_ACCESS_KEY_ID=tu_access_key
 AWS_SECRET_ACCESS_KEY=tu_secret_key
-AWS_STORAGE_BUCKET_NAME=badgersproducts
-AWS_S3_REGION_NAME=us-east-2
+AWS_STORAGE_BUCKET_NAME=badgerss3
+AWS_S3_REGION_NAME=sa-east-1
 ```
 
 ### 3. **Crear Base de Datos PostgreSQL**

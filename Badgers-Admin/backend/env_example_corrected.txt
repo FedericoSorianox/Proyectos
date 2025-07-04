@@ -1,0 +1,40 @@
+# ========================================
+# CONFIGURACIÓN DE VARIABLES DE ENTORNO
+# ========================================
+# Copia este archivo como .env y reemplaza con tus valores reales
+
+# Django Secret Key (genera una nueva para producción)
+SECRET_KEY=django-insecure-hl!998$#)*zpak-)bamp+4$#2a1mh77zyf!$ar+gii6(8*ose4
+
+# Modo de desarrollo (True para desarrollo, False para producción)
+DEBUG=True
+
+# Hosts permitidos (separados por comas)
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# ========================================
+# CONFIGURACIÓN DE AWS S3
+# ========================================
+
+# Credenciales de AWS (reemplaza con tus valores reales)
+AWS_ACCESS_KEY_ID=tu_access_key_id_aqui
+AWS_SECRET_ACCESS_KEY=tu_secret_access_key_aqui
+
+# Configuración del bucket S3
+AWS_STORAGE_BUCKET_NAME=badgerss3
+AWS_S3_REGION_NAME=sa-east-1
+
+# ========================================
+# CONFIGURACIÓN DE CORS
+# ========================================
+# URLs permitidas para el frontend
+CORS_ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+
+# ========================================
+# NOTAS IMPORTANTES
+# ========================================
+# 
+# 1. NUNCA subas el archivo .env al repositorio
+# 2. Mantén tus credenciales seguras
+# 3. Para producción, usa variables de entorno del servidor
+# 4. Regenera las claves secretas para producción 
