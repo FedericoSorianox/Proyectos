@@ -48,9 +48,17 @@ const FinanzasPage = () => {
 
     const filteredData = useMemo(() => {
         const filterByDate = (items, dateField) => items.filter(item => {
+            if (!item[dateField]) return false;
+            
             const itemDate = new Date(item[dateField]);
-            const sameYear = itemDate.getFullYear() === year;
-            const sameMonth = month === 0 || itemDate.getMonth() + 1 === month;
+            if (isNaN(itemDate.getTime())) return false; // Invalid date
+            
+            const itemYear = itemDate.getFullYear();
+            const itemMonth = itemDate.getMonth() + 1; // Convert to 1-12 format
+            
+            const sameYear = itemYear === year;
+            const sameMonth = month === 0 || itemMonth === month;
+            
             return sameYear && sameMonth;
         });
 
@@ -58,9 +66,9 @@ const FinanzasPage = () => {
         const ventasFiltradas = filterByDate(ventas, 'fecha_venta');
         const gastosFiltrados = filterByDate(gastos, 'fecha');
         
-        const ingresosCuotas = pagosFiltrados.reduce((acc, p) => acc + parseFloat(p.monto), 0);
-        const ingresosVentas = ventasFiltradas.reduce((acc, v) => acc + parseFloat(v.total_venta), 0);
-        const totalGastos = gastosFiltrados.reduce((acc, g) => acc + parseFloat(g.monto), 0);
+        const ingresosCuotas = pagosFiltrados.reduce((acc, p) => acc + parseFloat(p.monto || 0), 0);
+        const ingresosVentas = ventasFiltradas.reduce((acc, v) => acc + parseFloat(v.total_venta || 0), 0);
+        const totalGastos = gastosFiltrados.reduce((acc, g) => acc + parseFloat(g.monto || 0), 0);
         
         return {
             ingresosCuotas,
@@ -152,7 +160,6 @@ const FinanzasPage = () => {
             return;
         }
         const PORCENTAJE_PARA_SALARIOS = 0.60;
-        const semanas_por_mes = 4;
         const horas_socio_1 = horasFede;
         const horas_socio_2 = horasGuille;
         const horas_socio_3 = horasGonza;
@@ -267,6 +274,11 @@ const FinanzasPage = () => {
                                             ))}
                                         </Form.Select>
                                     </Form.Group>
+                                </div>
+                                <div className="text-center mb-3">
+                                    <small className="text-muted">
+                                        Mostrando datos para: <strong>{month === 0 ? 'Todos los meses' : months[month]} {year}</strong>
+                                    </small>
                                 </div>
                                 <Card.Title as="h4" className="mb-4 text-center text-primary">Resumen Gráfico</Card.Title>
                         <ResponsiveContainer width="100%" height={300}>
