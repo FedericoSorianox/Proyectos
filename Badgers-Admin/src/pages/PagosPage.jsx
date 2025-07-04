@@ -228,14 +228,16 @@ const PagosPage = () => {
         // Reemplazar puntos y guiones medios por guiones bajos en el CI para el id
         const ci_normalizado = socio.ci.replace(/[.-]/g, '_');
         const id_pago = `${ci_normalizado}_${mes}_${año}`;
+        const fecha_pago = `${año}-${String(mes).padStart(2, '0')}-01`; // Día 1 del mes seleccionado
         const payload = {
             id: id_pago,
             socio: socio.ci,
             mes: parseInt(mes),
             año: parseInt(año),
             monto: parseFloat(monto),
-            fecha_pago: new Date().toISOString().split('T')[0]
+            fecha_pago // <-- Usar la fecha del mes/año seleccionado
         };
+        
         try {
             await apiClient.post('/pagos/', payload);
             fetchSociosAndPagos();
