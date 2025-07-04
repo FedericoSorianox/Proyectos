@@ -139,10 +139,12 @@ class PagoViewSet(viewsets.ModelViewSet):
                 )
                 success_count += 1
             except Exception as e:
-                # ... (tu manejo de errores sigue igual) ...
+                error_count += 1
+                pago_id = f"{row.get('ci', 'N/A')}_{row.get('mes', 'N/A')}_{row.get('año', 'N/A')}"
+                errors.append(f"Fila con ID {pago_id}: {str(e)}")
 
-             return Response({
-            "message": f"Importación completada...",
+        return Response({
+            "message": f"Importación completada. {success_count} pagos importados/actualizados, {error_count} errores.",
             "errors": errors
         }, status=status.HTTP_200_OK)
 
