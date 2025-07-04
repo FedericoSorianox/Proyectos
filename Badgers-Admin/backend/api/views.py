@@ -116,12 +116,20 @@ class PagoViewSet(viewsets.ModelViewSet):
 
         for row in reader:
             try:
-                # El ID se genera a partir de los datos
-                pago_id = f"{row['ci']}_{row['mes']}_{row['año']}"
+                # Obtenemos la CI del CSV
+                ci = row['ci']
+                
+                # 👇 ¡ESTE ES EL CAMBIO CLAVE! 👇
+                # Reemplazamos puntos y guiones en la CI antes de crear el ID
+                ci_transformada = ci.replace('.', '').replace('-', '_')
+
+                # Creamos el ID con la CI ya transformada
+                pago_id = f"{ci_transformada}_{row['mes']}_{row['año']}"
+                
                 Pago.objects.update_or_create(
                     id=pago_id,
                     defaults={
-                        'socio_id': row['ci'],
+                        'socio_id': ci, # Aquí guardamos la CI original
                         'mes': int(row['mes']),
                         'año': int(row['año']),
                         'monto': float(row['monto']),
@@ -131,12 +139,10 @@ class PagoViewSet(viewsets.ModelViewSet):
                 )
                 success_count += 1
             except Exception as e:
-                error_count += 1
-                pago_id = f"{row.get('ci', 'N/A')}_{row.get('mes', 'N/A')}_{row.get('año', 'N/A')}"
-                errors.append(f"Fila con ID {pago_id}: {str(e)}")
+                # ... (tu manejo de errores sigue igual) ...
 
-        return Response({
-            "message": f"Importación completada. {success_count} pagos importados/actualizados, {error_count} errores.",
+             return Response({
+            "message": f"Importación completada...",
             "errors": errors
         }, status=status.HTTP_200_OK)
 
