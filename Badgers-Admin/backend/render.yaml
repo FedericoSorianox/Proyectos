@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: badgers-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.18
+      - key: DJANGO_SETTINGS_MODULE
+        value: badgers_project.settings_production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: badgers-db
+          property: connectionString
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_STORAGE_BUCKET_NAME
+        value: badgersproducts
+      - key: AWS_S3_REGION_NAME
+        value: us-east-2
+
+databases:
+  - name: badgers-db
+    databaseName: badgers_db
+    user: badgers_user
+    plan: free 

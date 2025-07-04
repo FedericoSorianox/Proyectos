@@ -1,0 +1,2880 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add gasto",
+    "content_type": 7,
+    "codename": "add_gasto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change gasto",
+    "content_type": 7,
+    "codename": "change_gasto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete gasto",
+    "content_type": 7,
+    "codename": "delete_gasto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view gasto",
+    "content_type": 7,
+    "codename": "view_gasto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add producto",
+    "content_type": 8,
+    "codename": "add_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change producto",
+    "content_type": 8,
+    "codename": "change_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete producto",
+    "content_type": 8,
+    "codename": "delete_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view producto",
+    "content_type": 8,
+    "codename": "view_producto"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add socio",
+    "content_type": 9,
+    "codename": "add_socio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change socio",
+    "content_type": 9,
+    "codename": "change_socio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete socio",
+    "content_type": 9,
+    "codename": "delete_socio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view socio",
+    "content_type": 9,
+    "codename": "view_socio"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add venta",
+    "content_type": 10,
+    "codename": "add_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change venta",
+    "content_type": 10,
+    "codename": "change_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete venta",
+    "content_type": 10,
+    "codename": "delete_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view venta",
+    "content_type": 10,
+    "codename": "view_venta"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add pago",
+    "content_type": 11,
+    "codename": "add_pago"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change pago",
+    "content_type": 11,
+    "codename": "change_pago"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete pago",
+    "content_type": 11,
+    "codename": "delete_pago"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view pago",
+    "content_type": 11,
+    "codename": "view_pago"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$PBvW3vpRVNdjx5M2ttyWVT$C0xujdA829vowZ+Z7kV27m7kaG8LWnFypc4DNE65EBo=",
+    "last_login": "2025-06-27T13:58:58.980Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "fede.danguard@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-20T12:23:22.306Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$WtOE8eDruTF9nXkehe2mJv$aSrU4BmMt0l397xlBioehNKvs0v7zDU0O8YD7oxqnqs=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "fede",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-27T13:51:44.863Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "api",
+    "model": "gasto"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "api",
+    "model": "producto"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "api",
+    "model": "socio"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "api",
+    "model": "venta"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "api",
+    "model": "pago"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "305u7e1m6kdibcjcmj60evy241dszbx8",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hDKgIBL9z0DGZhBqoYmpV0Z765NutDtf-_9l4i4rTVunZc4kbiIQZx-t4T5wW0HdMd2m2We27pMSe6KPGiX40z8vB7u30HFXr81OCQovphkbYEhZ0OgICTN5AwhkQegMzKEUrxmp8ixJdCZtdNBGfH-AABBOGk:1uV9bW:96H3Bvsyvo_AModVMjxzkZz25lUAUP6oewGDjhMEOJg",
+    "expire_date": "2025-07-11T13:58:58.981Z"
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "1111111",
+  "fields": {
+    "nombre": "Francisco Hijo de Gabriel",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "12345467",
+  "fields": {
+    "nombre": "Enzo",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "222222",
+  "fields": {
+    "nombre": "Gabriel Veterano",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "3.065.000-1",
+  "fields": {
+    "nombre": "Gabriel Sessa",
+    "celular": "099760087",
+    "contacto_emergencia": "099515479(ana - mama)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1982-02-25",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "casmu",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "3.066.011-7",
+  "fields": {
+    "nombre": "Pablo Bracco",
+    "celular": "091465200",
+    "contacto_emergencia": "099130192 madre",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1982-02-17",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Asse",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "3.396.806.1",
+  "fields": {
+    "nombre": "Andrea Lostorto",
+    "celular": "099147031",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1982-07-07",
+    "tipo_cuota": "",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "333333",
+  "fields": {
+    "nombre": "Nacho German",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.174.994-2",
+  "fields": {
+    "nombre": "Pablo Santos",
+    "celular": "098663776",
+    "contacto_emergencia": "099523135(Victoria pareja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1983-09-20",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Emergencia 1727",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.305.923.8",
+  "fields": {
+    "nombre": "Gonzalo Fernandez",
+    "celular": "091811237",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.319.516-7",
+  "fields": {
+    "nombre": "Dario Aprea",
+    "celular": "091080852",
+    "contacto_emergencia": "091367750 Sabrina (Pareja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1990-12-03",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Emergencia Uno",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.341.635-1",
+  "fields": {
+    "nombre": "Mauricio Trigo",
+    "celular": "097088167",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "No",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.347.605-8",
+  "fields": {
+    "nombre": "Martin Tomas",
+    "celular": "096224670",
+    "contacto_emergencia": "26966829",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1987-07-29",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.388.227-9",
+  "fields": {
+    "nombre": "Nicolas Acuri",
+    "celular": "091809890",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1991-11-06",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.455.198-6",
+  "fields": {
+    "nombre": "Luis Robatto",
+    "celular": "98773943",
+    "contacto_emergencia": "091271742(vieja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2025-07-13",
+    "tipo_cuota": "Solo Pesas - $800",
+    "enfermedades": "No",
+    "comentarios": "UNO",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.499.467-1",
+  "fields": {
+    "nombre": "Cristian Musto",
+    "celular": "93775898",
+    "contacto_emergencia": "094460597 Edith (mamà)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1987-01-06",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "Emergencia Uno",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.504.415-2",
+  "fields": {
+    "nombre": "Uiller Aguero",
+    "celular": "093527321",
+    "contacto_emergencia": "098765419 (valentina compañera)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1992-12-30",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "medica uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.577.477-9",
+  "fields": {
+    "nombre": "Franco Igorra",
+    "celular": "099449203",
+    "contacto_emergencia": "099665457 (Enrique. Padre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1993-10-09",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.579.669-8",
+  "fields": {
+    "nombre": "Facundo Lucas",
+    "celular": "099408565",
+    "contacto_emergencia": "99601437",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1994-02-17",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Casmu 1727",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "Lesion",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.597.096-5",
+  "fields": {
+    "nombre": "Nico Masseti",
+    "celular": "092174404",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1991-06-22",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.632.514-1",
+  "fields": {
+    "nombre": "Bruno Romaniello",
+    "celular": "099001689",
+    "contacto_emergencia": "091721968 (valentina)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1990-06-12",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Semm Cosem",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.655.471-4",
+  "fields": {
+    "nombre": "Mariana Peralta",
+    "celular": "09509100",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.705.225-6",
+  "fields": {
+    "nombre": "Steven Araujo",
+    "celular": "92522290",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.707.638-3",
+  "fields": {
+    "nombre": "Gabriel Mendez",
+    "celular": "098421040",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1995-10-21",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "La Españala Suat",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.719.200-6",
+  "fields": {
+    "nombre": "Federico Mayora",
+    "celular": "099551670",
+    "contacto_emergencia": "099763016( Madre - Beatriz",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1993-01-11",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "La Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.7310271-1",
+  "fields": {
+    "nombre": "Carlos grizutti",
+    "celular": "91379003",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1997-03-04",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Hospital Policial",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.751.198-7",
+  "fields": {
+    "nombre": "Guillermo Viera",
+    "celular": "094649949",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.752.168-9",
+  "fields": {
+    "nombre": "Alam Moreira",
+    "celular": "092985676",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1996-10-06",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Asse",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.799.217.1",
+  "fields": {
+    "nombre": "Martin Godoy",
+    "celular": "098922201",
+    "contacto_emergencia": "099878171 (madre- Lucia)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1997-06-24",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Casmu",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.813.953-0",
+  "fields": {
+    "nombre": "Rodrigo pino",
+    "celular": "098406720",
+    "contacto_emergencia": "98162134 (hermano)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1989-11-29",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "si",
+    "comentarios": "Emergencia 1727",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.881.028-1",
+  "fields": {
+    "nombre": "Erik Suarez",
+    "celular": "098597271",
+    "contacto_emergencia": "Sylvia Molina 091315742 (Madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1999-02-01",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Medica Uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.939.920-4",
+  "fields": {
+    "nombre": "Santiago Dos Santos",
+    "celular": "098636313",
+    "contacto_emergencia": "099055467 Carolina (madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1999-07-26",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Mucam (medica uy)",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.949.662-4",
+  "fields": {
+    "nombre": "Guillermo Canario",
+    "celular": "097503188",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1994-05-28",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Suat",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.950.076-6",
+  "fields": {
+    "nombre": "Matias Fistemberg",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "No",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.954.229-9",
+  "fields": {
+    "nombre": "Pablo Fernandez",
+    "celular": "095626175",
+    "contacto_emergencia": "Walter 099108974",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1998-02-07",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.962.578-6",
+  "fields": {
+    "nombre": "Federico Soriano",
+    "celular": "092506506",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "Narcolepsia",
+    "comentarios": "",
+    "foto": "https://badgerss3.s3.sa-east-1.amazonaws.com/media/socios_fotos/keiko.jpg",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": "",
+    "inactive_reason": "",
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "4.990.264-3",
+  "fields": {
+    "nombre": "Virginia Machado",
+    "celular": "097188961",
+    "contacto_emergencia": "097593003( kevin  - pareja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1991-09-29",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "UCM",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "44444",
+  "fields": {
+    "nombre": "Nia Dopico",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "46836336",
+  "fields": {
+    "nombre": "Rodrigo Mayobre",
+    "celular": "94067043",
+    "contacto_emergencia": "095671157 emilia pareja",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1991-10-26",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Semm Evangelico",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.036.355-1",
+  "fields": {
+    "nombre": "Cristian Serra",
+    "celular": "093752082",
+    "contacto_emergencia": "095824204(sandra - madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1999-11-15",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.093.640-9",
+  "fields": {
+    "nombre": "Mathias Goso",
+    "celular": "096126200",
+    "contacto_emergencia": "094727000 Abuela",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1997-05-09",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Uno",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.103.728-0",
+  "fields": {
+    "nombre": "Mauro Remeseiro",
+    "celular": "096604148",
+    "contacto_emergencia": "096308331 Victoria (hermana)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2001-03-21",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "La Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.126.543-9",
+  "fields": {
+    "nombre": "Ramon Garcia",
+    "celular": "096638030",
+    "contacto_emergencia": "097732353 Esposa",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1991-11-16",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Asse",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.128.758-0",
+  "fields": {
+    "nombre": "Paulo garcia",
+    "celular": "097711700",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.136.103-7",
+  "fields": {
+    "nombre": "Nicolas costa",
+    "celular": "099852745",
+    "contacto_emergencia": "093424435 Pareja",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1996-06-28",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Uno",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.154.139-2",
+  "fields": {
+    "nombre": "Luis Rivas",
+    "celular": "096355465",
+    "contacto_emergencia": "091809890 (nicolas amigo)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1989-03-19",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "SMI",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.241.994-6",
+  "fields": {
+    "nombre": "Agustin Caniella",
+    "celular": "098838474",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2002-10-26",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "temporal",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.326.102-1",
+  "fields": {
+    "nombre": "Guillermo Firpo",
+    "celular": "094255906",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.383.797-1",
+  "fields": {
+    "nombre": "Sebastian Hernandez",
+    "celular": "096137208",
+    "contacto_emergencia": "099883963 Yuliana (pareja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1995-08-21",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "Medica Uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.406.589-2",
+  "fields": {
+    "nombre": "Matias Blanco",
+    "celular": "096013324",
+    "contacto_emergencia": "092621410 Valentina (Pareja)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1997-06-17",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.416.765-4",
+  "fields": {
+    "nombre": "Santiago Ricardo",
+    "celular": "094460036",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.471.893-4",
+  "fields": {
+    "nombre": "Emanuel etcheverria",
+    "celular": "096191006",
+    "contacto_emergencia": "099744017 (padre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2004-12-01",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Medica uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.475.204-5",
+  "fields": {
+    "nombre": "Franco Diaz",
+    "celular": "093301314",
+    "contacto_emergencia": "93977042",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2004-11-25",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Asociación española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.507.285-0",
+  "fields": {
+    "nombre": "Gonzalo Rodriguez",
+    "celular": "091609848",
+    "contacto_emergencia": "092494976 pareja",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2000-05-19",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "medica uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.523.961-2",
+  "fields": {
+    "nombre": "Tomas Puerto",
+    "celular": "0916776561",
+    "contacto_emergencia": "099141121(padre - Alvaro)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2003-12-28",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Suat",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.558.511-2",
+  "fields": {
+    "nombre": "Agustina Acosta",
+    "celular": "092453693",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1998-03-03",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "Usa inhalador esporadico",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.563.588-0",
+  "fields": {
+    "nombre": "Mateo De Leòn",
+    "celular": "094776282",
+    "contacto_emergencia": "Daniel (Padre )094656942",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "1999-10-30",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.608.549.2",
+  "fields": {
+    "nombre": "Mateo Taroco",
+    "celular": "091818548",
+    "contacto_emergencia": "099299062( Begonia madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2006-09-11",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "No",
+    "comentarios": "SUAT",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.652.877-5",
+  "fields": {
+    "nombre": "Sebastian Ipuche",
+    "celular": "098017199",
+    "contacto_emergencia": "26821536",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2004-12-29",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "Cosem",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.714.242.9",
+  "fields": {
+    "nombre": "Juan manuel nuñez",
+    "celular": "092347524",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "",
+    "enfermedades": "no",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": false,
+    "inactive_status": "otro",
+    "inactive_reason": "",
+    "inactive_since": "2025-06-01",
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.750.920-7",
+  "fields": {
+    "nombre": "Milagros Machado",
+    "celular": "096418085",
+    "contacto_emergencia": "097188961 (virginia - madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2008-09-03",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "UCM",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.822.901.0",
+  "fields": {
+    "nombre": "Thiago Rodriguez",
+    "celular": "098871462",
+    "contacto_emergencia": "099333719 (Lorena - madre)",
+    "emergencia_movil": "",
+    "fecha_nacimiento": "2009-10-18",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "Medica Uruguaya",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "5.972.038-8",
+  "fields": {
+    "nombre": "Adrian Rodriguez",
+    "celular": "092090450",
+    "contacto_emergencia": "",
+    "emergencia_movil": "091090470(federico - hno)",
+    "fecha_nacimiento": "2003-04-04",
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "no",
+    "comentarios": "Española",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "555555",
+  "fields": {
+    "nombre": "Nico Techera",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "699666",
+  "fields": {
+    "nombre": "Pablo Stagnaro",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "69966677788",
+  "fields": {
+    "nombre": "Rodrigo Fervenza",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.socio",
+  "pk": "87788787",
+  "fields": {
+    "nombre": "Ruben",
+    "celular": "",
+    "contacto_emergencia": "",
+    "emergencia_movil": "",
+    "fecha_nacimiento": null,
+    "tipo_cuota": "Libre - $2000",
+    "enfermedades": "",
+    "comentarios": "",
+    "foto": "",
+    "fecha_registro": "2025-06-20",
+    "activo": true,
+    "inactive_status": null,
+    "inactive_reason": null,
+    "inactive_since": null,
+    "en_vacaciones": false
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "1111111_6_2025",
+  "fields": {
+    "socio": "1111111",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "12345467_6_2025",
+  "fields": {
+    "socio": "12345467",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "222222_6_2025",
+  "fields": {
+    "socio": "222222",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "3.065.000-1_6_2025",
+  "fields": {
+    "socio": "3.065.000-1",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "3.066.011-7_6_2025",
+  "fields": {
+    "socio": "3.066.011-7",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "333333_6_2025",
+  "fields": {
+    "socio": "333333",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.174.994-2_6_2025",
+  "fields": {
+    "socio": "4.174.994-2",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.319.516-7_6_2025",
+  "fields": {
+    "socio": "4.319.516-7",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.347.605-8_6_2025",
+  "fields": {
+    "socio": "4.347.605-8",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.388.227-9_6_2025",
+  "fields": {
+    "socio": "4.388.227-9",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.577.477-9_6_2025",
+  "fields": {
+    "socio": "4.577.477-9",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.597.096-5_6_2025",
+  "fields": {
+    "socio": "4.597.096-5",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.632.514-1_6_2025",
+  "fields": {
+    "socio": "4.632.514-1",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.707.638-3_6_2025",
+  "fields": {
+    "socio": "4.707.638-3",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.719.200-6_6_2025",
+  "fields": {
+    "socio": "4.719.200-6",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.7310271-1_6_2025",
+  "fields": {
+    "socio": "4.7310271-1",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.752.168-9_6_2025",
+  "fields": {
+    "socio": "4.752.168-9",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.813.953-0_6_2025",
+  "fields": {
+    "socio": "4.813.953-0",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.939.920-4_6_2025",
+  "fields": {
+    "socio": "4.939.920-4",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.949.662-4_6_2025",
+  "fields": {
+    "socio": "4.949.662-4",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.954.229-9_6_2025",
+  "fields": {
+    "socio": "4.954.229-9",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "4.990.264-3_6_2025",
+  "fields": {
+    "socio": "4.990.264-3",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "44444_6_2025",
+  "fields": {
+    "socio": "44444",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "46836336_6_2025",
+  "fields": {
+    "socio": "46836336",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.036.355-1_6_2025",
+  "fields": {
+    "socio": "5.036.355-1",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.093.640-9_6_2025",
+  "fields": {
+    "socio": "5.093.640-9",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.103.728-0_6_2025",
+  "fields": {
+    "socio": "5.103.728-0",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.383.797-1_6_2025",
+  "fields": {
+    "socio": "5.383.797-1",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.471.893-4_6_2025",
+  "fields": {
+    "socio": "5.471.893-4",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.475.204-5_6_2025",
+  "fields": {
+    "socio": "5.475.204-5",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.507.285-0_6_2025",
+  "fields": {
+    "socio": "5.507.285-0",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.523.961-2_6_2025",
+  "fields": {
+    "socio": "5.523.961-2",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.558.511-2_6_2025",
+  "fields": {
+    "socio": "5.558.511-2",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.563.588-0_6_2025",
+  "fields": {
+    "socio": "5.563.588-0",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.608.549.2_6_2025",
+  "fields": {
+    "socio": "5.608.549.2",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.652.877-5_6_2025",
+  "fields": {
+    "socio": "5.652.877-5",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.750.920-7_6_2025",
+  "fields": {
+    "socio": "5.750.920-7",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.822.901.0_6_2025",
+  "fields": {
+    "socio": "5.822.901.0",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "5.972.038-8_6_2025",
+  "fields": {
+    "socio": "5.972.038-8",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "555555_6_2025",
+  "fields": {
+    "socio": "555555",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "699666_6_2025",
+  "fields": {
+    "socio": "699666",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.pago",
+  "pk": "87788787_6_2025",
+  "fields": {
+    "socio": "87788787",
+    "mes": 6,
+    "año": 2025,
+    "monto": "2000.00",
+    "fecha_pago": "2025-06-20",
+    "metodo_pago": null
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 1,
+  "fields": {
+    "nombre": "Agua Salus",
+    "precio_venta": "90.00",
+    "precio_costo": "58.00",
+    "stock": 45,
+    "foto": "productos_fotos/agua_salus.png"
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 2,
+  "fields": {
+    "nombre": "Alfa Way",
+    "precio_venta": "90.00",
+    "precio_costo": "70.00",
+    "stock": 11,
+    "foto": "https://badgerss3.s3.sa-east-1.amazonaws.com/media/productos_fotos/alfaway.jpg"
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 3,
+  "fields": {
+    "nombre": "Cinturones",
+    "precio_venta": "600.00",
+    "precio_costo": "450.00",
+    "stock": 7,
+    "foto": "productos_fotos/cinturones.png"
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 4,
+  "fields": {
+    "nombre": "Invictus - Kimono Blanco",
+    "precio_venta": "4000.00",
+    "precio_costo": "3000.00",
+    "stock": 0,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 5,
+  "fields": {
+    "nombre": "Keiko - kimonos varios colores",
+    "precio_venta": "5000.00",
+    "precio_costo": "4500.00",
+    "stock": 1,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 6,
+  "fields": {
+    "nombre": "Koral - kimono varios colores",
+    "precio_venta": "5000.00",
+    "precio_costo": "4500.00",
+    "stock": 1,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 7,
+  "fields": {
+    "nombre": "Naja o Pretorian - Kimono varios colores",
+    "precio_venta": "3200.00",
+    "precio_costo": "2500.00",
+    "stock": 2,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 8,
+  "fields": {
+    "nombre": "Parche chico",
+    "precio_venta": "150.00",
+    "precio_costo": "75.00",
+    "stock": 11,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 9,
+  "fields": {
+    "nombre": "Parche Grande",
+    "precio_venta": "300.00",
+    "precio_costo": "150.00",
+    "stock": 4,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 10,
+  "fields": {
+    "nombre": "Power Ade",
+    "precio_venta": "90.00",
+    "precio_costo": "55.00",
+    "stock": 29,
+    "foto": "productos_fotos/power_ade.png"
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 11,
+  "fields": {
+    "nombre": "Protector bucal",
+    "precio_venta": "300.00",
+    "precio_costo": "200.00",
+    "stock": 3,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 12,
+  "fields": {
+    "nombre": "RDX - Bolso",
+    "precio_venta": "3500.00",
+    "precio_costo": "2800.00",
+    "stock": 1,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 13,
+  "fields": {
+    "nombre": "RDX - Cabezal",
+    "precio_venta": "3800.00",
+    "precio_costo": "3040.00",
+    "stock": 1,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 14,
+  "fields": {
+    "nombre": "RDX - Coderas - Varios Colores",
+    "precio_venta": "1500.00",
+    "precio_costo": "1200.00",
+    "stock": 2,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 15,
+  "fields": {
+    "nombre": "RDX - Guantes - F4 F7",
+    "precio_venta": "2800.00",
+    "precio_costo": "2240.00",
+    "stock": 3,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 16,
+  "fields": {
+    "nombre": "RDX - Rodilleras - Varios Colores",
+    "precio_venta": "1500.00",
+    "precio_costo": "1200.00",
+    "stock": 4,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 17,
+  "fields": {
+    "nombre": "RDX - Short - Varios Colores",
+    "precio_venta": "2200.00",
+    "precio_costo": "1760.00",
+    "stock": 1,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 18,
+  "fields": {
+    "nombre": "RDX - Tibiales Medias - Varios Colores",
+    "precio_venta": "2200.00",
+    "precio_costo": "1760.00",
+    "stock": 2,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 19,
+  "fields": {
+    "nombre": "RDX - Tibiales - Varios Colores",
+    "precio_venta": "3500.00",
+    "precio_costo": "2800.00",
+    "stock": 0,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 20,
+  "fields": {
+    "nombre": "RDX - Vendas",
+    "precio_venta": "500.00",
+    "precio_costo": "400.00",
+    "stock": 0,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 21,
+  "fields": {
+    "nombre": "Stickers",
+    "precio_venta": "20.00",
+    "precio_costo": "10.00",
+    "stock": 170,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 22,
+  "fields": {
+    "nombre": "The Badger - Canguro",
+    "precio_venta": "900.00",
+    "precio_costo": "900.00",
+    "stock": 0,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 23,
+  "fields": {
+    "nombre": "The Badger - Lycra Azul",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 4,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 24,
+  "fields": {
+    "nombre": "The Badger - Lycra BJJ",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 2,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 25,
+  "fields": {
+    "nombre": "The Badger - Lycra Blanca",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 0,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 26,
+  "fields": {
+    "nombre": "The Badger - Lycra Marron",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 3,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 27,
+  "fields": {
+    "nombre": "The Badger - Lycra Muay Thai",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 3,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 28,
+  "fields": {
+    "nombre": "The Badger - Lycra Violeta",
+    "precio_venta": "1650.00",
+    "precio_costo": "1431.00",
+    "stock": 4,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 29,
+  "fields": {
+    "nombre": "The Badger - Remera",
+    "precio_venta": "500.00",
+    "precio_costo": "500.00",
+    "stock": 6,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 30,
+  "fields": {
+    "nombre": "The Badger - Short",
+    "precio_venta": "1450.00",
+    "precio_costo": "1251.00",
+    "stock": 2,
+    "foto": ""
+  }
+},
+{
+  "model": "api.producto",
+  "pk": 31,
+  "fields": {
+    "nombre": "Way Bar",
+    "precio_venta": "75.00",
+    "precio_costo": "55.00",
+    "stock": 18,
+    "foto": ""
+  }
+},
+{
+  "model": "api.venta",
+  "pk": 1,
+  "fields": {
+    "producto": 2,
+    "cantidad": 2,
+    "total_venta": "180.00",
+    "fecha_venta": "2025-06-20T12:49:37.682Z"
+  }
+},
+{
+  "model": "api.venta",
+  "pk": 2,
+  "fields": {
+    "producto": 26,
+    "cantidad": 1,
+    "total_venta": "1650.00",
+    "fecha_venta": "2025-06-20T12:50:28.818Z"
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 1,
+  "fields": {
+    "concepto": "Facturando",
+    "monto": "592.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 2,
+  "fields": {
+    "concepto": "UTE Importe: $ 9.811. Vencimiento: 16/05/2025.",
+    "monto": "9811.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 3,
+  "fields": {
+    "concepto": "DGI",
+    "monto": "1415.00",
+    "fecha": "2025-06-15",
+    "categoria": "Otros",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 4,
+  "fields": {
+    "concepto": "Te paso la liquidacion de ute hasta cambio de contador. 16mar al 09abril: $ 1.441",
+    "monto": "1441.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 5,
+  "fields": {
+    "concepto": "Antel marzo: $ 735",
+    "monto": "735.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 6,
+  "fields": {
+    "concepto": "Antel abril: $ 835",
+    "monto": "835.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 7,
+  "fields": {
+    "concepto": "Ose 3abr al 05mayo: $  793",
+    "monto": "793.00",
+    "fecha": "2025-06-15",
+    "categoria": "Servicios",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 8,
+  "fields": {
+    "concepto": "Porto seguro",
+    "monto": "2401.00",
+    "fecha": "2025-06-13",
+    "categoria": "Alquiler",
+    "descripcion": null
+  }
+},
+{
+  "model": "api.gasto",
+  "pk": 9,
+  "fields": {
+    "concepto": "Alquiler",
+    "monto": "40000.00",
+    "fecha": "2025-06-10",
+    "categoria": "Alquiler",
+    "descripcion": null
+  }
+}
+]

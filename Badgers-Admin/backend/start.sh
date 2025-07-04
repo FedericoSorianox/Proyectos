@@ -5,7 +5,7 @@ echo "=== INICIANDO APLICACIÓN DJANGO ==="
 echo "Timestamp: $(date)"
 
 # Configurar explícitamente las variables de entorno
-export DJANGO_SETTINGS_MODULE=badgers_project.settings
+export DJANGO_SETTINGS_MODULE=badgers_project.settings_production
 export PYTHONPATH=/opt/render/project/src/Badgers-Admin/backend
 
 echo "DJANGO_SETTINGS_MODULE: $DJANGO_SETTINGS_MODULE"
