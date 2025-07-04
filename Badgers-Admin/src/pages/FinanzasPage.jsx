@@ -106,20 +106,23 @@ const FinanzasPage = () => {
 
     const handleDeleteRecord = async (type, id) => {
   try {
-    // 👇 1. Muestra el ID exacto que recibe la función
-    console.log('1. ID recibido por handleDeleteRecord:', id);
+    console.log('ID original:', id);
 
-    let idToUse = id;
-    if (type === 'pagos') {
-      idToUse = id.replace(/[.-]/g, '_');
-      
-      // 👇 2. Muestra el ID justo después de la transformación
-      console.log('2. ID transformado para la URL:', idToUse);
-    }
+    // Aseguramos que la transformación es correcta
+    const idProcesado = id.replace(/[.-]/g, '_');
     
-    await apiClient.delete(`/${type}s/${idToUse}/`);
+    // Construimos la URL final en una variable
+    const urlFinal = `/${type}s/${idProcesado}/`;
+
+    // 👇 Log final para la máxima depuración
+    console.log('URL que se enviará a Axios:', urlFinal);
     
-    // Si la eliminación fue exitosa, el código continúa y actualiza la lista...
+    // Enviamos la petición
+    await apiClient.delete(urlFinal);
+
+    console.log('¡Registro eliminado con éxito!');
+    
+    // Actualizamos el estado del frontend
     if (type === 'pagos') {
       setPagos(prev => prev.filter(p => p.id !== id));
     } else if (type === 'ventas') {
@@ -132,7 +135,7 @@ const FinanzasPage = () => {
     setSelectedRecord(null);
 
   } catch (error) {
-    console.error(`Error deleting ${type}:`, error);
+    console.error(`Error al eliminar ${type}:`, error);
   }
 };
 
