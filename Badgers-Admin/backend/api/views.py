@@ -97,9 +97,33 @@ class SocioViewSet(viewsets.ModelViewSet):
 class PagoViewSet(viewsets.ModelViewSet):
     queryset = Pago.objects.all().order_by('-fecha_pago')
     serializer_class = PagoSerializer
-    pagination_class = None  # Desactivamos la paginación
+    pagination_class = None
     permission_classes = [IsAuthenticated]
     
+    def get_queryset(self):
+        """
+        Sobrescribe el método get_queryset para filtrar por mes y año 
+        si se proporcionan como parámetros en la URL.
+        """
+        # Obtenemos el queryset base (todos los pagos)
+        queryset = super().get_queryset()
+        
+        # Obtenemos los parámetros 'mes' y 'año' de la petición GET
+        mes = self.request.query_params.get('mes')
+        año = self.request.query_params.get('año')
+        
+        # Si ambos parámetros existen, filtramos el queryset
+        if mes and año:
+            try:
+                # Filtramos por los campos 'mes' y 'año' del modelo Pago
+                queryset = queryset.filter(mes=int(mes), año=int(año))
+            except (ValueError, TypeError):
+                # En caso de que los parámetros no sean números válidos,
+                # no se aplica el filtro para evitar errores.
+                pass
+                
+        return queryset
+
     @action(detail=False, methods=['post'], parser_classes=[MultiPartParser, FormParser]) 
     def import_csv(self, request, *args, **kwargs):
         csv_file = request.FILES.get('file')
