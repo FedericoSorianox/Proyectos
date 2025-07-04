@@ -111,7 +111,7 @@ const FinanzasPage = () => {
     // Aseguramos que la transformación es correcta
     const idProcesado = String(id).replace(/[.-]/g, '_')
     
-    const urlFinal = `/${type}s/${idProcesado}/`;
+    const urlFinal = `/${type}/${idProcesado}/`;
     console.log('URL que se enviará a Axios:', urlFinal);
     
     // Enviamos la petición
