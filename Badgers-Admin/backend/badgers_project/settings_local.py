@@ -27,7 +27,7 @@ DEBUG = True
 # Almacenamiento S3 (descomenta para usar)
 STORAGES = {
     "default": {
-        "BACKEND": "storages.backends.s3.S3Storage",
+       "BACKEND": "storages.backends.s3.S3Storage",
     },
     "staticfiles": {
         "BACKEND": "storages.backends.s3.S3Storage",

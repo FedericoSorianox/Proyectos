@@ -225,9 +225,9 @@ const PagosPage = () => {
     };
     
     const handleRegistrarPago = async (socio, mes, año, monto) => {
-        // Reemplazar puntos por guiones bajos en el CI para el id
-        const ci_sin_puntos = socio.ci.replace(/\./g, '_');
-        const id_pago = `${ci_sin_puntos}_${mes}_${año}`;
+        // Reemplazar puntos y guiones medios por guiones bajos en el CI para el id
+        const ci_normalizado = socio.ci.replace(/[.-]/g, '_');
+        const id_pago = `${ci_normalizado}_${mes}_${año}`;
         const payload = {
             id: id_pago,
             socio: socio.ci,
