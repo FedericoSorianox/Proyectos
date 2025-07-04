@@ -115,38 +115,36 @@ class PagoViewSet(viewsets.ModelViewSet):
         errors = []
 
         for row in reader:
-            try:
-                # Obtenemos la CI del CSV
-                ci = row['ci']
-                
-                # 👇 ¡ESTE ES EL CAMBIO CLAVE! 👇
-                # Reemplazamos puntos y guiones en la CI antes de crear el ID
-                ci_transformada = ci.replace('.', '').replace('-', '_')
+         try:
+            ci = row['ci']
+            
+            # --- LA LÍNEA CORREGIDA ---
+            # Reemplazamos tanto puntos como guiones por guiones bajos
+            ci_transformada = ci.replace('.', '_').replace('-', '_')
 
-                # Creamos el ID con la CI ya transformada
-                pago_id = f"{ci_transformada}_{row['mes']}_{row['año']}"
-                
-                Pago.objects.update_or_create(
-                    id=pago_id,
-                    defaults={
-                        'socio_id': ci, # Aquí guardamos la CI original
-                        'mes': int(row['mes']),
-                        'año': int(row['año']),
-                        'monto': float(row['monto']),
-                        'fecha_pago': parse_date_from_csv(row.get('fecha_pago')),
-                        'metodo_pago': row.get('metodo_pago'),
-                    }
-                )
-                success_count += 1
-            except Exception as e:
-                error_count += 1
-                pago_id = f"{row.get('ci', 'N/A')}_{row.get('mes', 'N/A')}_{row.get('año', 'N/A')}"
-                errors.append(f"Fila con ID {pago_id}: {str(e)}")
+            pago_id = f"{ci_transformada}_{row['mes']}_{row['año']}"
+            
+            Pago.objects.update_or_create(
+                id=pago_id,
+                defaults={
+                    'socio_id': ci, 
+                    'mes': int(row['mes']),
+                    'año': int(row['año']),
+                    'monto': float(row['monto']),
+                    'fecha_pago': parse_date_from_csv(row.get('fecha_pago')),
+                    'metodo_pago': row.get('metodo_pago'),
+                }
+            )
+            success_count += 1
+         except Exception as e:
+            error_count += 1
+            pago_id = f"{row.get('ci', 'N/A')}_{row.get('mes', 'N/A')}_{row.get('año', 'N/A')}"
+            errors.append(f"Fila con ID {pago_id}: {str(e)}")
 
         return Response({
-            "message": f"Importación completada. {success_count} pagos importados/actualizados, {error_count} errores.",
-            "errors": errors
-        }, status=status.HTTP_200_OK)
+        "message": f"Importación completada. {success_count} pagos importados/actualizados, {error_count} errores.",
+        "errors": errors
+    }, status=status.HTTP_200_OK)
 
 
 class ProductoViewSet(viewsets.ModelViewSet):
