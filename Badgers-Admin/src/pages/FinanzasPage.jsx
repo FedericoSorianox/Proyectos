@@ -432,6 +432,8 @@ const FinanzasPage = () => {
                                 {getFilteredRecords()
                                     .sort((a, b) => new Date(b.fecha_pago || b.fecha_venta || b.fecha) - new Date(a.fecha_pago || a.fecha_venta || a.fecha))
                                     .map((record) => {
+                                        // 👇 AÑADE ESTE CONSOLE.LOG PARA INSPECCIONAR EL OBJETO 👇
+                                        console.log('Objeto record renderizado:', record);
                                         const isPago = 'fecha_pago' in record;
                                         const isVenta = 'fecha_venta' in record;
                                         const type = isPago ? 'pagos' : isVenta ? 'ventas' : 'gastos';
