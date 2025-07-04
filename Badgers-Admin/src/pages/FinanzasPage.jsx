@@ -109,7 +109,7 @@ const FinanzasPage = () => {
             let idToUse = id;
             if (type === 'pagos') {
                 // Si es un pago, reemplazar puntos por guiones bajos en el id
-                idToUse = id.replace(/-/g, '_');
+                idToUse = id.replace(/.-/g, '_');
             }
             await apiClient.delete(`/${type}/${idToUse}/`);
             if (type === 'pagos') {
