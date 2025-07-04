@@ -156,9 +156,25 @@ AWS_DEFAULT_ACL = 'public-read' # Permite que los archivos subidos sean pública
 # 3. Ubicación de los archivos
 # Los archivos de MEDIA (subidos por los usuarios) irán a la carpeta 'media/' dentro del bucket.
 MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # 4. (Opcional pero recomendado) Configuración para archivos estáticos (CSS, JS)
 # Si en el futuro quieres servir también tus archivos estáticos desde S3.
 # STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# ==============================================================================
+# CONFIGURACIÓN DE ALMACENAMIENTO MODERNA (DJANGO 4.2+)
+# ==============================================================================
+
+# Los archivos de MEDIA (subidos por los usuarios) se manejarán con S3.
+# Los archivos STATIC (CSS, JS) se seguirán manejando localmente.
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+    },
+}
