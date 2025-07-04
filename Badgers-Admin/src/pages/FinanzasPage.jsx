@@ -105,26 +105,36 @@ const FinanzasPage = () => {
     const months = ["Todos", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
     const handleDeleteRecord = async (type, id) => {
-        try {
-            let idToUse = id;
-            if (type === 'pagos') {
-                // Si es un pago, reemplazar puntos por guiones bajos en el id
-                idToUse = id.replace(/.-/g, '_');
-            }
-            await apiClient.delete(`/${type}/${idToUse}/`);
-            if (type === 'pagos') {
-                setPagos(prev => prev.filter(p => p.id !== id));
-            } else if (type === 'ventas') {
-                setVentas(prev => prev.filter(v => v.id !== id));
-            } else if (type === 'gastos') {
-                setGastos(prev => prev.filter(g => g.id !== id));
-            }
-            setDeleteDialogOpen(false);
-            setSelectedRecord(null);
-        } catch (error) {
-            console.error(`Error deleting ${type}:`, error);
-        }
-    };
+  try {
+    // 👇 1. Muestra el ID exacto que recibe la función
+    console.log('1. ID recibido por handleDeleteRecord:', id);
+
+    let idToUse = id;
+    if (type === 'pagos') {
+      idToUse = id.replace(/[.-]/g, '_');
+      
+      // 👇 2. Muestra el ID justo después de la transformación
+      console.log('2. ID transformado para la URL:', idToUse);
+    }
+    
+    await apiClient.delete(`/${type}s/${idToUse}/`);
+    
+    // Si la eliminación fue exitosa, el código continúa y actualiza la lista...
+    if (type === 'pagos') {
+      setPagos(prev => prev.filter(p => p.id !== id));
+    } else if (type === 'ventas') {
+      setVentas(prev => prev.filter(v => v.id !== id));
+    } else if (type === 'gastos') {
+      setGastos(prev => prev.filter(g => g.id !== id));
+    }
+
+    setDeleteDialogOpen(false);
+    setSelectedRecord(null);
+
+  } catch (error) {
+    console.error(`Error deleting ${type}:`, error);
+  }
+};
 
     const openDeleteDialog = (record, type) => {
         setSelectedRecord({ ...record, type });
