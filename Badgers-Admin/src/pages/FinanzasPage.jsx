@@ -49,16 +49,9 @@ const FinanzasPage = () => {
     const filteredData = useMemo(() => {
         const filterByDate = (items, dateField) => items.filter(item => {
             if (!item[dateField]) return false;
-            
-            const itemDate = new Date(item[dateField]);
-            if (isNaN(itemDate.getTime())) return false; // Invalid date
-            
-            const itemYear = itemDate.getFullYear();
-            const itemMonth = itemDate.getMonth() + 1; // Convert to 1-12 format
-            
+            const [itemYear, itemMonth] = item[dateField].split('-').map(Number);
             const sameYear = itemYear === year;
             const sameMonth = month === 0 || itemMonth === month;
-            
             return sameYear && sameMonth;
         });
 
