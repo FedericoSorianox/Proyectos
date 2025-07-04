@@ -69,7 +69,7 @@ class Venta(models.Model):
     producto = models.ForeignKey(Producto, on_delete=models.SET_NULL, null=True)
     cantidad = models.IntegerField()
     total_venta = models.DecimalField(max_digits=10, decimal_places=2)
-    fecha_venta = models.DateTimeField(auto_now_add=True)
+    fecha_venta = models.DateField()  # <-- Cambia esto, elimina auto_now_add
 
 class Gasto(models.Model):
     concepto = models.CharField(max_length=255)
